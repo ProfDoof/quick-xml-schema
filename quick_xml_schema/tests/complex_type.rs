@@ -5,7 +5,7 @@ use yaserde::ser::to_string;
 #[test]
 fn complex_type_string() {
   #[derive(Debug, XmlSchema)]
-  #[xml_schema(source = "xml_schema/tests/complex_type.xsd")]
+  #[xml_schema(source = "quick_xml_schema/tests/complex_type.xsd")]
   struct ComplexTypeSchema;
 
   let xml_1 = r#"

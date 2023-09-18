@@ -34,7 +34,7 @@ impl XmlSchemaAttribute {
     let mut target_prefix = None;
 
     for attr in attrs.iter() {
-      if !attr.path.is_ident("xml_schema") {
+      if !attr.path.is_ident("quick_xml_schema") {
         continue;
       }
 
@@ -116,7 +116,7 @@ mod tests {
   fn generate_attributes(content: &str) -> Vec<Attribute> {
     let mut punctuated = Punctuated::new();
     punctuated.push(PathSegment {
-      ident: Ident::new("xml_schema", Span::call_site()),
+      ident: Ident::new("quick_xml_schema", Span::call_site()),
       arguments: PathArguments::None,
     });
 
